@@ -43,12 +43,26 @@ function renderRamen(ramen) {
 }
 
 function createRamenForm(){
-    const form = document.getElementById("new-ramen")
-    form.addEventListener("submit", e => {
+    const ramenForm = document.getElementById("new-ramen")
+    ramenForm.addEventListener("submit", e => {
         e.preventDefault()
-        
-        
+        const imageInput = e.target.image.value
+        const restaurantInput = e.target.restaurant.value
+        const nameInput = e.target.name.value
+        const ratingInput = e.target.rating.value
+        const commentInput = e.target["new-comment"].value
+
+        const newRamen = {
+            name: nameInput,
+            restaurant: restaurantInput,
+            image: imageInput,
+            rating: ratingInput,
+            comment: commentInput
+        }
+        renderRamen(newRamen)
+        e.target.reset()
     })
 }
 
 getRamen()
+createRamenForm()
