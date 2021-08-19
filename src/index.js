@@ -1,4 +1,3 @@
-// write your code here
 const BASE_URL = "http://localhost:3000/ramens/"
 
 function getRamen() {
@@ -18,7 +17,6 @@ function renderRamen(ramen) {
 
     const menuImage = document.createElement("img")
     menuImage.src = ramen.image
-    document.querySelector("#ramen-menu").append(menuImage)
 
     menuImage.addEventListener("click", e => {
         const menuImgLg = document.querySelector(".detail-image")
@@ -63,6 +61,3 @@ function createRamenForm(){
         e.target.reset()
     })
 }
-
-getRamen()
-createRamenForm()
