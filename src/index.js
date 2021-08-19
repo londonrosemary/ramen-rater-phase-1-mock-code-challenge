@@ -45,6 +45,7 @@ function createRamenForm(){
     ramenForm.addEventListener("submit", e => {
         e.preventDefault()
         const imageInput = e.target.image.value
+        //const imageInput = e.getElementById("new-image").value
         const restaurantInput = e.target.restaurant.value
         const nameInput = e.target.name.value
         const ratingInput = e.target.rating.value
@@ -61,3 +62,8 @@ function createRamenForm(){
         e.target.reset()
     })
 }
+function init() {
+    createRamenForm()
+    getRamen()
+}
+init()
