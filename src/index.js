@@ -48,8 +48,8 @@ function renderRamen(ramen) {
 //This section is only needed if we had the other data to add, see line 19
     //menuCard.append(menuImage)
     //menuContainer.appendChild(menuCard)
-
 }
+
 //Create function to decide what we want to do with the form
 function createRamenForm(){
 //Select the correct element and set to a variable for easy use
@@ -60,7 +60,7 @@ function createRamenForm(){
         e.preventDefault()
 //This is where we select the input values and assign them to variables for easy use
         const imageInput = e.target.image.value
-        //const imageInput = e.getElementById("new-image").value (This is an alternate way to write line XXX)
+        //const imageInput = e.getElementById("new-image").value (This is an alternate way to write line 62)
         const restaurantInput = e.target.restaurant.value
         const nameInput = e.target.name.value
         const ratingInput = e.target.rating.value
